@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+bank-venv/
+
+# Runtime data and logs created by launcher.py
+distributed-bank-system/data/
+distributed-bank-system/logs/
+
+# Archives and media
+*.zip
+*.mp4
+*.mov
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
