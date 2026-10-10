@@ -119,6 +119,3 @@ All runs finished with 0 failed requests and balances that stayed consistent. Th
 - [Project report](docs/Distributed_Bank_Report.docx)
 - [System architecture diagrams](docs/System_Architecture_Diagrams.docx)
 
-## Author
-
-Adya Singhal

@@ -12,11 +12,6 @@ bank-venv/
 distributed-bank-system/data/
 distributed-bank-system/logs/
 
-# Archives and media
-*.zip
-*.mp4
-*.mov
-
 # OS / editor
 .DS_Store
 .idea/
