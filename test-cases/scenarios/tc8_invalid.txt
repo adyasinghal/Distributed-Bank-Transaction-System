@@ -1,0 +1,8 @@
+# TC8: Invalid destination account
+RESET
+BALANCE A101
+TRANSFER A101 A999 5000
+BALANCE A101
+# Also try a valid-prefix but non-existent account
+TRANSFER A101 A105 5000
+BALANCE A101

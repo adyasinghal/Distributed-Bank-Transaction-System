@@ -1,0 +1,14 @@
+# TC5: Concurrent transfers involving the same account
+# A101 = 10000. Three transfers out of A101 and one into it, all at once.
+RESET
+BALANCE A101
+BALANCE A201
+BALANCE A301
+PARALLEL TRANSFER A101 A201 4000 ; TRANSFER A101 A301 4000 ; TRANSFER A101 A201 4000 ; TRANSFER A202 A101 1000
+# At most two of the three ₹4000 debits can be covered (plus the ₹1000 credit
+# if it lands first); A101 never goes negative and total money is unchanged.
+BALANCE A101
+BALANCE A201
+BALANCE A301
+BALANCE A202
+LOG 6

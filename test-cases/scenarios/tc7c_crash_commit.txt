@@ -1,0 +1,10 @@
+# TC7c: Server crashes during the transaction (after the COMMIT decision)
+RESET
+FAULT 2 on_commit_before_apply crash
+TRANSFER A101 A201 5000
+# PENDING (never SUCCESS): A101 is debited, the credit to A201 is outstanding
+BALANCE A101
+HEALTH
+LOG 1
+# Then: python launcher.py --start 2  → recovery applies the credit once
+# and run: python client/client.py --script ../test-cases/scenarios/tc7_after_restart.txt

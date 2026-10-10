@@ -1,0 +1,10 @@
+# Demo: crash during a cross-server transfer, PENDING → SUCCESS after recovery
+RESET
+BALANCE A101
+BALANCE A201
+FAULT 2 on_commit_before_apply crash
+TRANSFER A101 A201 5000
+HEALTH
+LOG 2
+# Now restart Server 2 in another terminal:  python launcher.py --start 2
+# then run:  python client/client.py --script ../test-cases/scenarios/tc7_after_restart.txt

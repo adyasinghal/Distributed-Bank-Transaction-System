@@ -1,0 +1,5 @@
+# After restarting the crashed server (TC7b / TC7c)
+HEALTH
+BALANCE A101
+BALANCE A201
+LOG 3

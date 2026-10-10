@@ -1,0 +1,8 @@
+# TC7a: Server crashes before the transaction starts
+# Before running: python launcher.py --kill 2
+HEALTH
+TRANSFER A101 A201 5000
+# FAILED: Destination server unavailable (Server 2); A101 unchanged
+BALANCE A101
+LOG 1
+# Afterwards: python launcher.py --start 2

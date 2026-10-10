@@ -1,0 +1,7 @@
+# Assignment §5 demo: A101 = 10000, T1 and T2 each withdraw 8000 at the same instant
+RESET
+BALANCE A101
+PARALLEL WITHDRAW A101 8000 ; WITHDRAW A101 8000
+# Exactly one succeeds; the balance is 2000, never negative
+BALANCE A101
+LOG 2

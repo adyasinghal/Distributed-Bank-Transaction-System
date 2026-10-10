@@ -1,0 +1,6 @@
+# TC6: Concurrent withdrawal — only one should succeed
+RESET
+BALANCE A101
+PARALLEL WITHDRAW A101 7000 ; WITHDRAW A101 7000
+BALANCE A101
+LOG 2

@@ -1,0 +1,7 @@
+# TC7d: Destination server unavailable
+# Before running: python launcher.py --kill 3
+TRANSFER A101 A301 1000
+# FAILED: Destination server unavailable (Server 3); A101 unchanged
+BALANCE A101
+LOG 1
+# Afterwards: python launcher.py --start 3

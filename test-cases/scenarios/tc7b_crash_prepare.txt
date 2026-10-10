@@ -1,0 +1,10 @@
+# TC7b: Server crashes during the transaction (while preparing, before it votes)
+RESET
+FAULT 2 on_prepare_before_vote crash
+TRANSFER A101 A201 5000
+# FAILED; A101 unchanged and nothing held
+BALANCE A101
+HEALTH
+LOG 1
+# Then: python launcher.py --start 2  → S2 recovers its in-doubt row as ABORT
+# and run: python client/client.py --script ../test-cases/scenarios/tc7_after_restart.txt

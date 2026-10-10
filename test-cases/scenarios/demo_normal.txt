@@ -1,0 +1,29 @@
+# Demo script: normal operations → cross-server transfer → concurrent test → log
+# Run with: python client/client.py --script ../test-cases/scenarios/demo_normal.txt
+RESET
+
+HEALTH
+BALANCE A101
+BALANCE A201
+BALANCE A301
+
+# Deposit and withdraw
+DEPOSIT A101 5000
+WITHDRAW A101 2000
+BALANCE A101
+
+# Cross-server transfer
+TRANSFER A101 A201 3000
+BALANCE A101
+BALANCE A201
+
+# Same-server transfer
+TRANSFER A101 A102 1000
+BALANCE A101
+BALANCE A102
+
+# Transaction history
+HISTORY A101
+
+# Global log
+LOG 10
